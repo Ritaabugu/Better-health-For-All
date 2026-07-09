@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     formats: ["image/webp"],
   },
+  async rewrites() {
+    return [{ source: "/admin", destination: "/admin/index.html" }];
+  },
 };
 
 export default nextConfig;
