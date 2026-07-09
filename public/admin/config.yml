@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: Ritaabugu/Better-health-For-All
+  branch: main
+  base_url: https://better-health-for-all.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: simple
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    label_singular: "Post"
+    folder: "content/posts"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    identifier_field: title
+    summary: "{{title}} — {{category}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Lowercase, hyphens only, no spaces."
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Weight Loss", value: "weight-loss" }
+          - { label: "Weight Gain", value: "weight-gain" }
+          - { label: "Nutrition", value: "nutrition" }
+          - { label: "Healthy Habits", value: "healthy-habits" }
+          - { label: "Recipes & Meal Plans", value: "recipes-meal-plans" }
+      - label: "Meta Description"
+        name: "description"
+        widget: "text"
+        hint: "17 to 20 words. Must include the focus keyword."
+      - label: "Focus Keyword"
+        name: "focusKeyword"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Last Updated Date"
+        name: "updated"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+      - label: "Featured Image Alt Text"
+        name: "featuredImageAlt"
+        widget: "string"
+      - label: "Reading Time (minutes)"
+        name: "readingMinutes"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+      - label: "Post Body"
+        name: "body"
+        widget: "markdown"
