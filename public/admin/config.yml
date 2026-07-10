@@ -58,7 +58,7 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         required: false
-        - label: "Featured Photo (optional)"
+      - label: "Featured Photo (optional)"
         name: "featuredImage"
         widget: "image"
         required: false
