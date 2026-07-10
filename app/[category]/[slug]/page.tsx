@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Container from "@/components/Container";
 import CategoryBadge from "@/components/CategoryBadge";
-import PostThumb from "@/components/PostThumb";
+import FeaturedImage from "@/components/FeaturedImage";
 import Disclaimer from "@/components/Disclaimer";
 import NewsletterForm from "@/components/NewsletterForm";
 import PostCard from "@/components/PostCard";
@@ -105,7 +105,12 @@ export default function PostPage({
         </p>
 
         <div className="mt-8">
-          <PostThumb category={category} size="lg" />
+          <FeaturedImage
+            src={post.featuredImage}
+            alt={post.featuredImageAlt}
+            category={category}
+            size="lg"
+          />
           <p className="mt-2 font-body text-xs text-ink-soft">{post.featuredImageAlt}</p>
         </div>
 
