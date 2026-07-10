@@ -13,6 +13,7 @@ export interface PostFrontmatter {
   focusKeyword: string;
   date: string;
   updated?: string;
+  featuredImage?: string;
   featuredImageAlt: string;
   readingMinutes: number;
 }
