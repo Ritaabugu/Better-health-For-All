@@ -58,6 +58,11 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         required: false
+        - label: "Featured Photo (optional)"
+        name: "featuredImage"
+        widget: "image"
+        required: false
+        hint: "Upload a real photo to show at the top of this post. Leave empty to keep using the icon graphic."
       - label: "Featured Image Alt Text"
         name: "featuredImageAlt"
         widget: "string"
