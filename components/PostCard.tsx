@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PostThumb from "./PostThumb";
+import FeaturedImage from "./FeaturedImage";
 import CategoryBadge from "./CategoryBadge";
 import { getCategory } from "@/lib/categories";
 import type { Post } from "@/lib/posts";
@@ -27,7 +27,12 @@ export default function PostCard({
       className={`group flex flex-col ${featured ? "gap-5 sm:flex-row sm:items-center" : "gap-4"}`}
     >
       <Link href={`/${post.category}/${post.slug}`} className={featured ? "sm:w-1/2" : ""}>
-        <PostThumb category={category} size={featured ? "lg" : "md"} />
+        <FeaturedImage
+          src={post.featuredImage}
+          alt={post.featuredImageAlt}
+          category={category}
+          size={featured ? "lg" : "md"}
+        />
       </Link>
       <div className={featured ? "sm:w-1/2" : ""}>
         <CategoryBadge category={category} />
