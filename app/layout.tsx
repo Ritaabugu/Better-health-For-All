@@ -22,6 +22,11 @@ const siteUrl = "https://betterhealthforall.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+      other: {
+        "p:domain_verify": "5fba50b04053d5a2b3e1c7c29e3b5d27",
+      },
+    },
   title: {
     default: "Better Health For All",
     template: "%s | Better Health For All",
