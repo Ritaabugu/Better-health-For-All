@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const postPages = getAllPosts().map((post) => ({
     url: `${siteUrl}/${post.category}/${post.slug}`,
-    lastModified: new Date(post.updated ?? post.date),
+    lastModified: (() => { const d = new Date(post.updated || post.date); return isNaN(d.getTime()) ? new Date() : d; })(),
   }));
 
   return [...staticPages, ...categoryPages, ...postPages];
