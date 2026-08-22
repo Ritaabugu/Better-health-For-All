@@ -53,6 +53,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+      <head>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8454377310678707"
+    crossOrigin="anonymous"
+  ></script>
+</head>
       <body className="flex min-h-screen flex-col bg-paper font-body text-ink antialiased">
         <a
           href="#main-content"
