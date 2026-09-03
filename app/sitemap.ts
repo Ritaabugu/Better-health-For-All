@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { categories } from "@/lib/categories";
 import { getAllPosts } from "@/lib/posts";
 
-const siteUrl = "https://betterhealthforall.vercel.app";
+const siteUrl = "https://better-health-for-all.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
