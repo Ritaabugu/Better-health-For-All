@@ -18,7 +18,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://betterhealthforall.vercel.app";
+const siteUrl = "https://better-health-for-all.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
